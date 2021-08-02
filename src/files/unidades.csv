@@ -1,0 +1,90 @@
+﻿amarillo;segadores de hierro;info;320;269;-;infanteria;segadores_de_hierro.png
+amarillo;arcabuceros de tercio;;310;260;-;distancia;arcabuceros_de_tercio.png
+amarillo;lanceros de catafracto;;320;269;-;caballeria;lanceros_de_catafracto.png
+amarillo;húsares alados;;320;269;-;caballeria;húsares_alados.png
+amarillo;caballería lancera de fuego;;320;269;-;caballeria;caballería_lancera_de_fuego.png
+amarillo;caballeros monásticos;;330;277;-;caballeria;caballeros_monásticos.png
+amarillo;ballesteros montados;;320;269;-;caballeria;ballesteros_montados.png
+amarillo;keshigs;;325;273;wrath of the nomads;caballeria;keshigs.png
+amarillo;artilleros falconetti;;335;281;gilded age;distancia;artilleros_falconetti.png
+amarillo;ballesteros con pavés;;325;273;gilded age;distancia;ballesteros_con_pavés.png
+amarillo;guardia jenízara;;350;294;ciudad solitaria del imperio;infanteria;guardia_jenízara.png
+amarillo;guardia prohibida;;350;294;expedición;distancia;guardia_prohibida.png
+amarillo;caballería lancera del norte;;325;273;ventisca;caballeria;caballería_lancera_del_norte.png
+amarillo;guardia de sigrun;;330;277;nórdicos;infanteria;guardia_de_sigrun.png
+amarillo;batallón modao;;265;223;dinastía;infanteria;batallón_modao.png
+morado;sargentos alabarderos;;230;193;-;infanteria;sargentos_alabarderos.png
+morado;piqueros imperiales;;240;202;-;infanteria;piqueros_imperiales.png
+morado;guardas de palacio;;235;197;-;infanteria;guardas_de_palacio.png
+morado;lanceros de la guarda imperial;;255;214;-;infanteria;lanceros_de_la_guarda_imperial.png
+morado;sargentos jabalineros;;230;193;-;infanteria;sargentos_jabalineros.png
+morado;jabalineros imperiales;;240;202;-;infanteria;jabalineros_imperiales.png
+morado;arqueros vasallos;;250;210;-;distancia;arqueros_vasallos.png
+morado;arqueros imperiales;;260;218;-;distancia;arqueros_imperiales.png
+morado;fusileros kriegsrat;;265;223;-;distancia;fusileros_kriegsrat.png
+morado;arcabuceros imperiales;;270;227;-;distancia;arcabuceros_imperiales.png
+morado;yeomen;;250;210;-;caballeria;yeomen.png
+morado;caballería pesada de prefectura;;260;218;-;caballeria;caballería_pesada_de_prefectura.png
+morado;lanceros con hacha-daga;;270;227;-;caballeria;lanceros_con_hacha-daga.png
+morado;sargentos lanceros;;250;210;-;infanteria;sargentos_lanceros.png
+morado;hombres de armas;;240;202;-;infanteria;hombres_de_armas.png
+morado;tseregs;;240;202;wrath of the nomads;infanteria;tseregs.png
+morado;caballería khevtuul;;245;206;wrath of the nomads;caballeria;caballería_khevtuul.png
+morado;piqueros fortebraccio;;235;197;gilded age;infanteria;piqueros_fortebraccio.png
+morado;pagodas;;240;202;ciudad solitaria del imperio;infanteria;pagodas.png
+morado;caballería de ciparo;;260;218;ciudad solitaria del imperio;caballeria;caballería_de_ciparo.png
+morado;guarda leal;;265;223;expedición;infanteria;guarda_leal.png
+morado;caballero de la expedición;;255;214;expedición;infanteria;caballero_de_la_expedición.png
+morado;berserker;;245;206;nórdicos;infanteria;berserker.png
+morado;guarnición pelogris;;225;189;dinastía;infanteria;guarnición_pelogris.png
+azul;alabarderos;;175;147;-;infanteria;alabarderos.png
+azul;piqueros del dragón negro;;120;101;mercenarios;infanteria;piqueros_del_dragón_negro.png
+azul;piqueros de prefectura;;185;155;-;infanteria;piqueros_de_prefectura.png
+azul;guardas de prefectura;;180;151;-;infanteria;guardas_de_prefectura.png
+azul;lanceros del dragón negro;;110;92;mercenarios;infanteria;lanceros_del_dragón_negro.png
+azul;lanceros yelmo de hierro;;175;147;-;infanteria;lanceros_yelmo_de_hierro.png
+azul;jabalineros del dragón negro;;115;97;mercenarios;infanteria;jabalineros_del_dragón_negro.png
+azul;arqueros de fuego;;180;151;-;distancia;arqueros_de_fuego.png
+azul;arbalesteros de señorio;;180;151;-;distancia;arbalesteros_de_señorio.png
+azul;arqueros de vanguardia;;160;134;-;distancia;arqueros_de_vanguardia.png
+azul;arqueros de prefectura;;185;155;-;distancia;arqueros_de_prefectura.png
+azul;arcabuceros de señorío;;200;168;-;distancia;arcabuceros_de_señorío.png
+azul;tiradores del ciervo blanco;;100;84;mercenarios;distancia;tiradores_del_ciervo_blanco.png
+azul;arqueros víbora;;165;139;-;distancia;arqueros_víbora.png
+azul;tiradores con chu-ko-un;;180;151;-;distancia;tiradores_con_chu-ko-un.png
+azul;escuderos;;170;143;-;infanteria;escuderos.png
+azul;arqueros namkhan;;180;151;wrath of the nomads;distancia;arqueros_namkhan.png
+azul;caballería selemchid;;170;143;wrath of the nomads;caballeria;caballería_selemchid.png
+azul;khorchins;;170;143;wrath of the nomads;caballeria;khorchins.png
+azul;condotieros;;170;143;gilded age;infanteria;condotieros.png
+azul;mosquetes jenízaros;;195;164;ciudad solitaria del imperio;distancia;mosquetes_jenízaros.png
+azul;fuego salvaje barciano;;175;147;expedición;distancia;fuego_salvaje_barciano.png
+azul;alabarderos alpinos;;175;147;ventisca;infanteria;alabarderos_alpinos.png
+azul;huargos fenris;;180;151;nórdicos;infanteria;huargos_fenris.png
+azul;monjes de garrote;;175;147;dinastía;infanteria;monjes_de_garrote.png
+verde;piqueros milicianos;;110;92;-;infanteria;piqueros_milicianos.png
+verde;espadachines yelmo de hierro;;115;97;-;infanteria;espadachines_yelmo_de_hierro.png
+verde;jabalineros de señorío;;110;92;-;infanteria;jabalineros_de_señorío.png
+verde;jabalineros milicianos;;110;92;-;infanteria;jabalineros_milicianos.png
+verde;arqueros de señorío;;120;101;-;distancia;arqueros_de_señorío.png
+verde;ballesteros de señorío;;140;118;-;distancia;ballesteros_de_señorío.png
+verde;arqueros yelmo de hierro;;135;113;-;distancia;arqueros_yelmo_de_hierro.png
+verde;arcabuceros yelmo de hierro;;145;122;-;distancia;arcabuceros_yelmo_de_hierro.png
+verde;coustilleux;;130;109;-;caballeria;coustilleux.png
+verde;caballería ligera yelmo de hierro;;115;97;-;caballeria;caballería_ligera_yelmo_de_hierro.png
+verde;arqueros montados yelmo de hierro;;105;88;-;caballeria;arqueros_montados_yelmo_de_hierro.png
+verde;lanceros de señorío;;125;105;-;infanteria;lanceros_de_señorío.png
+verde;espadachines con ratán;;130;109;-;infanteria;espadachines_con_ratán.png
+verde;piqueros con ratán;;115;97;-;infanteria;piqueros_con_ratán.png
+verde;arqueros del dragón negro;;100;84;mercenarios;distancia;arqueros_del_dragón_negro.png
+blanco;medieros;;40;34;-;infanteria;medieros.png
+blanco;piqueros de señorío;;70;59;-;infanteria;piqueros_de_señorío.png
+blanco;centinelas aldeanos;;30;25;-;infanteria;centinelas_aldeanos.png
+blanco;siervos;;40;34;-;infanteria;siervos.png
+blanco;espadachines milicianos;;85;71;-;infanteria;espadachines_milicianos.png
+blanco;leñadores;;40;34;-;infanteria;leñadores.png
+blanco;martellatori;;30;25;mercenarios;infanteria;martellatori.png
+blanco;lanceros milicianos;;100;84;-;infanteria;lanceros_milicianos.png
+blanco;arqueros de leva;;80;67;-;distancia;arqueros_de_leva.png
+blanco;arqueros milicianos;;75;63;-;distancia;arqueros_milicianos.png
+morado;yeomen de la tundra;;230;193;ventisca;caballeria;yeomen_de_la_tundra.png

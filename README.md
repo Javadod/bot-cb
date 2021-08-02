@@ -1,2 +1,2 @@
 # bot-cb
-Bot que mostrará información relacionado al juego Conqueror's Blade.
+Bot que mostrará información relacionada al juego Conqueror's Blade.
