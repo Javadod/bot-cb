@@ -28,7 +28,7 @@ client.on('message', msg => {
         return
     const args = msg.content.slice(prefijo.length).split(/ +/)
     const comando = args.shift().toLowerCase()
-    const comando_unidad = msg.content.slice(prefijo.length)
+    const comando_unidad = msg.content.slice(prefijo.length).toLowerCase()
 
     if (comando === 'unidades')
         client.commands.get('unidades').execute(msg, client)
