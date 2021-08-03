@@ -15,13 +15,9 @@ for (const archivo of comandos) {
     client.commands.set(comando.nombre, comando)
 }
 
-
-
 client.on('ready', () => {
     console.log(`Logged in as ${client.user.tag}!`)
 })
-
-
 
 client.on('message', msg => {
     if (!msg.content.startsWith(prefijo) || msg.author.bot)

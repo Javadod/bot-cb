@@ -1,8 +1,40 @@
-const fs = require('fs')    
-const { type } = require('os')
+const fs = require('fs')
 const path = require('path')
+/**
+ * Función que discrimina entre el color de la unidad para su futuro almacenaje.
+ * @param {String} color Color que caracteriza a la unidad respectiva a analizar.
+ * @returns {Number} retorna la posición que se guardará la unidad.
+ */
+function color_unidad(color) {
+    if(color === 'amarillo')        return 0
+    else if (color === 'morado')    return 1
+    else if (color === 'azul')      return 2
+    else if (color === 'verde')     return 3
+    else if (color === 'blanco')    return 4
+    return 4
+}
+/**
+ * Tiene como funcionalidad almacenar los datos del archivo .csv sin el tipo y el color de la unidad.
+ * @param {String[]} datos_unidad datos de la unidad con toda la información.
+ * @returns {String[]} Retorna la lista con los datos necesarios.
+ */
+function datos_unidad_desordenados(datos_unidad) {
+    let lista = []
+    for (let i = 1; i <= 5; i++)
+        lista.push(datos_unidad[i])
+    lista.push(datos_unidad[7])
+    if (datos_unidad.length > 8)
+        for (let i = 8; i < datos_unidad.length; i++)
+            if (datos_unidad[i].length > 1)
+                lista.push(datos_unidad[i])
+    return lista
+}
 
 // calidad;nombre;informacion;liderazgo;liderazgo16;tipo;nombre_imagen
+/**
+ * Función que filtra los datos del archivo .csv para obtener y ordenar la información pertinente de cada unidad según su tipo y color.
+ * @returns {String[][][]} Retorna todas las unidades ordenadas por tipo y discriminadas por su nivel.
+ */
 function manejo_datos () {
     file_path = path.join(__dirname, '../files/unidades.csv')
     const csv = fs.readFileSync(file_path, 'utf8')
@@ -16,40 +48,12 @@ function manejo_datos () {
         if (datos_unidad.length > 1 && datos_unidad !== undefined) {
             let color = datos_unidad[0].replace('﻿', '').toLowerCase()
             let tipo = datos_unidad[6].toLowerCase()
-            if (tipo === 'infanteria') {
-                if (color === 'amarillo')
-                    infanteria[0].push([datos_unidad[1], datos_unidad[2], datos_unidad[3], datos_unidad[4], datos_unidad[5], datos_unidad[7]])
-                else if (color === 'morado')
-                    infanteria[1].push([datos_unidad[1], datos_unidad[2], datos_unidad[3], datos_unidad[4], datos_unidad[5], datos_unidad[7]])
-                else if (color === 'azul')
-                    infanteria[2].push([datos_unidad[1], datos_unidad[2], datos_unidad[3], datos_unidad[4], datos_unidad[5], datos_unidad[7]])
-                else if (color === 'verde')
-                    infanteria[3].push([datos_unidad[1], datos_unidad[2], datos_unidad[3], datos_unidad[4], datos_unidad[5], datos_unidad[7]])
-                else if (color === 'blanco')
-                    infanteria[4].push([datos_unidad[1], datos_unidad[2], datos_unidad[3], datos_unidad[4], datos_unidad[5], datos_unidad[7]])
-            } else if (tipo === 'caballeria') {
-                if (color === 'amarillo')
-                    caballeria[0].push([datos_unidad[1], datos_unidad[2], datos_unidad[3], datos_unidad[4], datos_unidad[5], datos_unidad[7]])
-                else if (color === 'morado')
-                    caballeria[1].push([datos_unidad[1], datos_unidad[2], datos_unidad[3], datos_unidad[4], datos_unidad[5], datos_unidad[7]])
-                else if (color === 'azul')
-                    caballeria[2].push([datos_unidad[1], datos_unidad[2], datos_unidad[3], datos_unidad[4], datos_unidad[5], datos_unidad[7]])
-                else if (color === 'verde')
-                    caballeria[3].push([datos_unidad[1], datos_unidad[2], datos_unidad[3], datos_unidad[4], datos_unidad[5], datos_unidad[7]])
-                else if (color === 'blanco')
-                    caballeria[4].push([datos_unidad[1], datos_unidad[2], datos_unidad[3], datos_unidad[4], datos_unidad[5], datos_unidad[7]])
-            } else if (tipo === 'distancia') {
-                if (color === 'amarillo')
-                    distancia[0].push([datos_unidad[1], datos_unidad[2], datos_unidad[3], datos_unidad[4], datos_unidad[5], datos_unidad[7]])
-                else if (color === 'morado')
-                    distancia[1].push([datos_unidad[1], datos_unidad[2], datos_unidad[3], datos_unidad[4], datos_unidad[5], datos_unidad[7]])
-                else if (color === 'azul')
-                    distancia[2].push([datos_unidad[1], datos_unidad[2], datos_unidad[3], datos_unidad[4], datos_unidad[5], datos_unidad[7]])
-                else if (color === 'verde')
-                    distancia[3].push([datos_unidad[1], datos_unidad[2], datos_unidad[3], datos_unidad[4], datos_unidad[5], datos_unidad[7]])
-                else if (color === 'blanco')
-                    distancia[4].push([datos_unidad[1], datos_unidad[2], datos_unidad[3], datos_unidad[4], datos_unidad[5], datos_unidad[7]])
-            }
+            if (tipo === 'infanteria')
+                infanteria[color_unidad(color)].push(datos_unidad_desordenados(datos_unidad))
+            else if (tipo === 'caballeria')
+                caballeria[color_unidad(color)].push(datos_unidad_desordenados(datos_unidad))
+            else if (tipo === 'distancia')
+                distancia[color_unidad(color)].push(datos_unidad_desordenados(datos_unidad))
         }
     }
     return [infanteria, caballeria, distancia]
@@ -69,6 +73,13 @@ function elegir_tipo (tipo) {
         return distancia
 }
 // Nombre de la unidad, tipo (infanteria, caballeria o distancia)
+
+/**
+ * Función que busca la unidad entre todo lo almacenado, obteniendo su información.
+ * @param {String} nombre Nombre de la unidad que se está buscando.
+ * @returns {String[]} Retorna la unidad con su información ordenada con el siguiente formato:
+ * Descripción, liderazgo, L.16%, temporada, nombre_imagen (será el del primer nombre), [nombres]
+ */
 function buscar_unidad (nombre) {
     let lista = unidades
     for(const tipo of lista) {
@@ -80,7 +91,6 @@ function buscar_unidad (nombre) {
             if (unidad.find(nombre_unidad => {
                 return ((typeof parseInt(nombre_unidad) !== 'number' || isNaN(parseInt(nombre_unidad))) && nombre_unidad === nombre)
             })) {
-                // Nuevo formato: Descripción, liderazgo, L.16%, temporada, nombre_imagen (será el del primer nombre), [nombres]
                 let nueva_lista = []
                 for (let i = 1; i <= 5; i++)
                     nueva_lista.push(unidad[i])
