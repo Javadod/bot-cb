@@ -30,7 +30,7 @@ function datos_unidad_desordenados(datos_unidad) {
     return lista
 }
 
-// calidad;nombre;informacion;liderazgo;liderazgo16;tipo;nombre_imagen
+// calidad;nombre;informacion;liderazgo;liderazgo16;tipo;recomendación;nombres->
 /**
  * Función que filtra los datos del archivo .csv para obtener y ordenar la información pertinente de cada unidad según su tipo y color.
  * @returns {String[][][]} Retorna todas las unidades ordenadas por tipo y discriminadas por su nivel.
@@ -78,7 +78,7 @@ function elegir_tipo (tipo) {
  * Función que busca la unidad entre todo lo almacenado, obteniendo su información.
  * @param {String} nombre Nombre de la unidad que se está buscando.
  * @returns {String[]} Retorna la unidad con su información ordenada con el siguiente formato:
- * Descripción, liderazgo, L.16%, temporada, nombre_imagen (será el del primer nombre), [nombres]
+ * Descripción, liderazgo, L.16%, temporada, recomendación, [nombres]
  */
 function buscar_unidad (nombre) {
     let lista = unidades
