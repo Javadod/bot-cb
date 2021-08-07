@@ -83,14 +83,8 @@ function elegir_tipo (tipo) {
 function buscar_unidad (nombre) {
     let lista = unidades
     for(const tipo of lista) {
-        for (const unidad of tipo[0]
-            .concat(tipo[1])
-            .concat(tipo[2])
-            .concat(tipo[3])
-            .concat(tipo[4])) {
-            if (unidad.find(nombre_unidad => {
-                return ((typeof parseInt(nombre_unidad) !== 'number' || isNaN(parseInt(nombre_unidad))) && nombre_unidad === nombre)
-            })) {
+        for (const unidad of tipo[0].concat(tipo[1]).concat(tipo[2]).concat(tipo[3]).concat(tipo[4])) {
+            if (condicion_buscar_unidad(nombre, unidad)) {
                 let nueva_lista = []
                 for (let i = 1; i <= 5; i++)
                     nueva_lista.push(unidad[i])
@@ -104,6 +98,22 @@ function buscar_unidad (nombre) {
         }
     }
     return []
+}
+/**
+ * Función que verifica los nombres si son correctos al arreglo de información entregado.
+ * @param {String} nombre nombre de la unidad buscada
+ * @param {String[]} unidad datos de la unidad entregada para comparar
+ * @returns retorna verdadero si los parámetros concuerdan con al menos uno, caso contrario, falso.
+ */
+function condicion_buscar_unidad(nombre, unidad) {
+    let lista = []
+    lista.push(unidad[0])
+    for (let index = 6; index <= unidad.length; index++) 
+        lista.push(unidad[index])
+    if (lista.find(nombre_unidad => nombre_unidad === nombre) !== undefined)
+        return true
+    else
+        return false
 }
 
 module.exports = {
