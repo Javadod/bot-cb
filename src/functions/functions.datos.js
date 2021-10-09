@@ -13,6 +13,9 @@ function color_unidad(color) {
     else if (color === 'blanco')    return 4
     return 4
 }
+//nombre;info;lid;lid16;temp;recomend;otros_nombres->
+//Nuevo
+//nombre;lid;temporada;descripción;recomendación;otros_nombres->
 /**
  * Tiene como funcionalidad almacenar los datos del archivo .csv sin el tipo y el color de la unidad.
  * @param {String[]} datos_unidad datos de la unidad con toda la información.
@@ -20,7 +23,7 @@ function color_unidad(color) {
  */
 function datos_unidad_desordenados(datos_unidad) {
     let lista = []
-    for (let i = 1; i <= 5; i++)
+    for (let i = 2; i <= 6; i++)
         lista.push(datos_unidad[i])
     lista.push(datos_unidad[7])
     if (datos_unidad.length > 8)
@@ -30,7 +33,9 @@ function datos_unidad_desordenados(datos_unidad) {
     return lista
 }
 
-// calidad;nombre;informacion;liderazgo;liderazgo16;tipo;recomendación;nombres->
+// calidad;nombre;informacion;liderazgo;liderazgo16;tipo;temporada;recomendación;nombres->
+// Nueva
+// calidad;tipo_unidad;nombre;liderazgo;temporada;descripcion;recomendacion;nombre->
 /**
  * Función que filtra los datos del archivo .csv para obtener y ordenar la información pertinente de cada unidad según su tipo y color.
  * @returns {String[][][]} Retorna todas las unidades ordenadas por tipo y discriminadas por su nivel.
@@ -47,7 +52,7 @@ function manejo_datos () {
         let datos_unidad = unidad.replace('\r', '').split(';')
         if (datos_unidad.length > 1 && datos_unidad !== undefined) {
             let color = datos_unidad[0].replace('﻿', '').toLowerCase()
-            let tipo = datos_unidad[6].toLowerCase()
+            let tipo = datos_unidad[1].toLowerCase()
             if (tipo === 'infanteria')
                 infanteria[color_unidad(color)].push(datos_unidad_desordenados(datos_unidad))
             else if (tipo === 'caballeria')
@@ -78,7 +83,7 @@ function elegir_tipo (tipo) {
  * Función que busca la unidad entre todo lo almacenado, obteniendo su información.
  * @param {String} nombre Nombre de la unidad que se está buscando.
  * @returns {String[]} Retorna la unidad con su información ordenada con el siguiente formato:
- * Descripción, liderazgo, L.16%, temporada, recomendación, [nombres]
+ * Liderazgo, temporada, descripción, recomendación, [nombres]
  */
 function buscar_unidad (nombre) {
     let lista = unidades
@@ -86,11 +91,11 @@ function buscar_unidad (nombre) {
         for (const unidad of tipo[0].concat(tipo[1]).concat(tipo[2]).concat(tipo[3]).concat(tipo[4])) {
             if (condicion_buscar_unidad(nombre, unidad)) {
                 let nueva_lista = []
-                for (let i = 1; i <= 5; i++)
+                for (let i = 1; i <= 4; i++)
                     nueva_lista.push(unidad[i])
                 let lista_aux = []
                 lista_aux.push(unidad[0])
-                for (let i = 6; i < unidad.length; i++)
+                for (let i = 5; i < unidad.length; i++)
                     lista_aux.push(unidad[i])
                 nueva_lista.push(lista_aux)
                 return nueva_lista
@@ -108,7 +113,7 @@ function buscar_unidad (nombre) {
 function condicion_buscar_unidad(nombre, unidad) {
     let lista = []
     lista.push(unidad[0])
-    for (let index = 6; index <= unidad.length; index++) 
+    for (let index = 5; index <= unidad.length; index++) 
         lista.push(unidad[index])
     if (lista.find(nombre_unidad => nombre_unidad === nombre) !== undefined)
         return true
