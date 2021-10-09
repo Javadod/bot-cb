@@ -116,9 +116,27 @@ function condicion_buscar_unidad(nombre, unidad) {
         return false
 }
 
+function ordenar_nombres (lista_nombre) {
+    let nombres = ''
+    for (const nombre of lista_nombre)
+        nombres = `${nombres}${nombre}\n`
+    if (nombres.length > 0)
+        return nombres
+    else
+        return '---'
+}
+
+function remover_elemento_lista (lista, elemento_buscado) {
+    for (let i = 0; i < lista.length; i++)
+        if (lista[i] === elemento_buscado)
+            lista.splice(i, 1)
+}
+
 module.exports = {
     infanteria,
     caballeria,
     distancia,
-    buscar_unidad
+    buscar_unidad,
+    ordenar_nombres,
+    remover_elemento_lista
 }

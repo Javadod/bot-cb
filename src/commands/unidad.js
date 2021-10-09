@@ -17,8 +17,7 @@ module.exports = {
             {name: 'Liderazgo', value: `${datos[1]}`, inline: true},
             {name: 'Liderazgo 100%-16%', value: `${datos[2]}`, inline: true},
             temporada
-        ], path.join(__dirname, `../images/${datos[5][0]}`), '1.png', '2.png')
+        ], path.join(__dirname, `../images/unidades/${datos[5][0]}`), '1.png', '2.png')
         message.channel.send(msj).catch(e => {console.log(`${e}`)})
-            
     }
 }
