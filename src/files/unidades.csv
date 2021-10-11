@@ -1,39 +1,39 @@
-﻿amarillo;infanteria;segadores de hierro;320;-;Unidad de infantería, ;;iron reapers;
+﻿amarillo;infanteria;segadores de hierro;315;-;Unidad de infantería, ;;iron reapers;
 amarillo;distancia;arcabuceros de tercio;310;-;;;tercio arquebusiers;
-amarillo;caballeria;lanceros de catafracto;320;-;;;cataphract lancers;
-amarillo;caballeria;húsares alados;320;-;;;winged hussars;husares
-amarillo;caballeria;caballería lancera de fuego;320;-;;;fire lancers;
-amarillo;caballeria;caballeros monásticos;330;-;;;monastic knights;
-amarillo;caballeria;ballesteros montados;320;-;;;rattan rangers;
-amarillo;caballeria;keshigs;325;wrath of the nomads;;;kheshigs;
-amarillo;distancia;artilleros falconetti;335;gilded age;;;falconetti gunners;falconetti
+amarillo;caballeria;lanceros de catafracto;310;-;;;cataphract lancers;
+amarillo;caballeria;húsares alados;315;-;;;winged hussars;husares
+amarillo;caballeria;caballería lancera de fuego;305;-;;;fire lancers;
+amarillo;caballeria;caballeros monásticos;305;-;;;monastic knights;
+amarillo;caballeria;ballesteros montados;305;-;;;rattan rangers;
+amarillo;caballeria;keshigs;310;wrath of the nomads;;;kheshigs;
+amarillo;distancia;artilleros falconetti;330;gilded age;;;falconetti gunners;falconetti
 amarillo;distancia;ballesteros con pavés;325;gilded age;;;pavise crossbowmen;paves
-amarillo;infanteria;guardia jenízara;350;ciudad solitaria del imperio;;;silahdars;
-amarillo;distancia;guardia prohibida;350;expedición;;;siphonarioi;
-amarillo;caballeria;caballería lancera del norte;325;ventisca;;;liaos rangers;liaos
-amarillo;infanteria;guardia de sigrun;330;nórdicos;;;shieldmaidens;
+amarillo;infanteria;guardia jenízara;320;ciudad solitaria del imperio;;;silahdars;
+amarillo;distancia;guardia prohibida;330;expedición;;;siphonarioi;
+amarillo;caballeria;caballería lancera del norte;315;ventisca;;;liaos rangers;liaos
+amarillo;infanteria;guardia de sigrun;310;nórdicos;;;shieldmaidens;
 amarillo;infanteria;batallón modao;315;dinastía;;;modao battalion;
 morado;infanteria;sargentos alabarderos;230;-;;;halberdier sergeants;
 morado;infanteria;piqueros imperiales;240;-;;;imperial pike guards;
 morado;infanteria;guardas de palacio;235;-;;;palace guards;
-morado;infanteria;lanceros de la guarda imperial;255;-;;;imperial spear guards;puertas
+morado;infanteria;lanceros de la guarda imperial;245;-;;;imperial spear guards;puertas
 morado;infanteria;sargentos jabalineros;230;-;;;javelin sergeants;
 morado;infanteria;jabalineros imperiales;240;-;;;imperial javelineers;
-morado;distancia;arqueros vasallos;250;-;;;vassal longbowmen;
-morado;distancia;arqueros imperiales;260;-;;;imperial archers;
-morado;distancia;fusileros kriegsrat;265;-;;;kriegsrat fusiliers;
-morado;distancia;arcabuceros imperiales;270;-;;;imperial arquebusiers;
-morado;caballeria;yeomen;250;-;;;;
-morado;caballeria;caballería pesada de prefectura;260;-;;;prefecture heavy cavalry;
-morado;caballeria;lanceros con hacha-daga;270;-;;;dagger axe lancers;
+morado;distancia;arqueros vasallos;245;-;;;vassal longbowmen;
+morado;distancia;arqueros imperiales;255;-;;;imperial archers;
+morado;distancia;fusileros kriegsrat;255;-;;;kriegsrat fusiliers;
+morado;distancia;arcabuceros imperiales;255;-;;;imperial arquebusiers;
+morado;caballeria;yeomen;240;-;;;;
+morado;caballeria;caballería pesada de prefectura;240;-;;;prefecture heavy cavalry;
+morado;caballeria;lanceros con hacha-daga;240;-;;;dagger axe lancers;
 morado;infanteria;sargentos lanceros;250;-;;;spear sergeants;
 morado;infanteria;hombres de armas;240;-;;;men at arms;men-at-arms
 morado;infanteria;tseregs;240;wrath of the nomads;;;;
 morado;caballeria;caballería khevtuul;245;wrath of the nomads;;;khevtuul cavalry;
 morado;infanteria;piqueros fortebraccio;235;gilded age;;;fortebraccio pikemen;
 morado;infanteria;pagodas;240;ciudad solitaria del imperio;;;azaps;fuerzas armadas del imperio
-morado;caballeria;caballería de ciparo;260;ciudad solitaria del imperio;;;sipahis;
-morado;infanteria;guarda leal;265;expedición;;;symmachean stalwarts;
+morado;caballeria;caballería de ciparo;245;ciudad solitaria del imperio;;;sipahis;
+morado;infanteria;guarda leal;260;expedición;;;symmachean stalwarts;
 morado;infanteria;caballero de la expedición;255;expedición;;;symmachean paladins;paladines
 morado;infanteria;berserker;245;nórdicos;;;berserkers;
 morado;infanteria;guarnición pelogris;240;dinastía;;;greyhair garrison;immortal garrison
@@ -57,7 +57,7 @@ azul;distancia;arqueros namkhan;180;wrath of the nomads;;;namkhan archers;
 azul;caballeria;caballería selemchid;170;wrath of the nomads;;;selemchid cavalry;
 azul;caballeria;khorchins;170;wrath of the nomads;;;;
 azul;infanteria;condotieros;170;gilded age;;;condottieri guards;condottieri
-azul;distancia;mosquetes jenízaros;195;ciudad solitaria del imperio;;;janissaries;
+azul;distancia;mosquetes jenízaros;190;ciudad solitaria del imperio;;;janissaries;
 azul;distancia;fuego salvaje barciano;175;expedición;;;zykalian militia;
 azul;infanteria;alabarderos alpinos;175;ventisca;;;landsknechts;
 azul;infanteria;huargos fenris;180;nórdicos;;;sons of fenrir;
@@ -87,7 +87,7 @@ blanco;infanteria;martellatori;30;mercenarios;Unidad de infantería, ALTAMENTE R
 blanco;infanteria;lanceros milicianos;100;-;;NO RECOMENDABLE;spear militia;
 blanco;distancia;arqueros de leva;80;-;;NO RECOMENDABLE;levy bowmen;
 blanco;distancia;arqueros milicianos;75;-;;NO RECOMENDABLE;archer militia;
-morado;caballeria;yeomen de la tundra;230;ventisca;;;armiger lancers;
+morado;caballeria;yeomen de la tundra;240;ventisca;;;armiger lancers;
 amarillo;distancia;granaderos shenji;315;tiranía;;;shenji grenadiers;shenji
 morado;infanteria;matones del hacha;240;tiranía;;;axe raiders;
-azul;caballeria;custodios;180;tiranía;;;surprises;outriders
+azul;caballeria;custodios;180;tiranía;;;outriders;surprises
