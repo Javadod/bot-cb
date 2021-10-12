@@ -19,7 +19,7 @@ module.exports = {
         }
         let msj = mensaje(`${capitalize(nombre_llamado)}`, `${nombres}\n${info}`, [
             {name: 'Liderazgo', value: `${datos[0]}`, inline: true},
-            {name: 'Liderazgo 100%-16%', value: `${Math.trunc(datos[0]*(1-0.16))}`, inline: true},
+            {name: 'Liderazgo -16%', value: `${Math.trunc(datos[0]*(1-0.16))}`, inline: true},
             temporada
         ], path.join(__dirname, `../images/unidades/${datos[4][0]}`), '1.png', '2.png')
         message.channel.send(msj).catch(e => {console.log(`${e}`)})
