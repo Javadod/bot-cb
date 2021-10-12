@@ -42,5 +42,5 @@ npm i
 npm start
 ```
 Una forma sencilla de iniciar el bot y probar cambios frecuentes.
-Nota: Debes tener instalado [Node js](https://nodejs.org/es/download/)
-Nota2: En los 2 primeros no es complicado, solo debes subir por completo el código para el uso.
+* Nota: Debes tener instalado [Node js](https://nodejs.org/es/download/)
+* Nota2: En los 2 primeros no es complicado, solo debes subir por completo el código para el uso.
