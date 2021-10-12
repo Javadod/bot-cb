@@ -15,9 +15,7 @@ opcionalmente e necesitará los datos de las unidades, es decir, la información
 Marca temporal(tiempo)  |   Tu nombre   |   Nombre de la unidad     |   Es recomendable?    |   Descripción de la unidad
 ```
 Como consejo puede ser llenado en un cuestionario google, en caso de cualquier problema con respecto a información no deseada, se filtrará.
-```
-* [Ej. Cuestionario](https://forms.gle/a92HXrNd2AU1p9sq7) - Cuestionario google
-```
+* [Ej Cuestionario](https://forms.gle/a92HXrNd2AU1p9sq7) - Cuestionario google
 ### Token Discord bot
 Para que lo puedas usar en tu servidor, necesitarás crear un bot en Discord en el acceso de [desarrolladores](https://discord.com/developers/applications) y presionar el botón de crear aplicación, introduces el nombre de la aplicación y verás nuevos navegadores que podrás personalizar a tu gusto, pero el que nos importa está en la barra de navegación llamado _Bot_, que aparecerá el ícono, _username_ y token, este último necesitamos y copiamos para luego hacer lo siguiente:
 * Creamos un archivo llamado .env en la carpeta principal y le ponemos lo siguiente
