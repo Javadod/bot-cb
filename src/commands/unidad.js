@@ -13,7 +13,11 @@ module.exports = {
             temporada = {name: 'Temporada', value: `${capitalize(datos[1])}`, inline: true}
         else
             temporada = {name: 'Temporada', value: 'No incluye', inline: true}
-        let msj = mensaje(`${capitalize(nombre_llamado)}`, `${nombres}\n**${datos[3]}\n${datos[2]}**`, [
+        let info = ''
+        for (const dato of datos[5]) {
+            info = `${info}Por: **${dato[3]}**, **${dato[1].toUpperCase()}** - ${dato[2]}\n`
+        }
+        let msj = mensaje(`${capitalize(nombre_llamado)}`, `${nombres}\n${info}`, [
             {name: 'Liderazgo', value: `${datos[0]}`, inline: true},
             {name: 'Liderazgo 100%-16%', value: `${Math.trunc(datos[0]*(1-0.16))}`, inline: true},
             temporada

@@ -64,6 +64,30 @@ function manejo_datos () {
     return [infanteria, caballeria, distancia]
 }
 
+/**
+ * Función que importa la información de las unidades hecha por la comunidad previamente filtrada.
+ * Datos brutos: marca_temporal(publicación),nombre_usuario,nombre_unidad,recomendable(escala),descripción
+ * 
+ * Datos nuevos: nombre_unidad,recomendable(escala),descripción,nombre_usuario
+ */
+ function importar_informacion_unidad () {
+    file_path = path.join(__dirname, '../files/datos_unidades.csv')
+    const csv = fs.readFileSync(file_path, 'utf8')
+    const lista = csv.toString().split('\n')
+    let lista_nueva = []
+    for (let index = 0; index < lista.length; index++) {
+        let datos_unidad = lista[index].replace('\r', '').split(';')
+        let lista_aux = []
+        lista_aux.push(datos_unidad[2])
+        lista_aux.push(datos_unidad[3])
+        lista_aux.push(datos_unidad[4])
+        lista_aux.push(datos_unidad[1])
+        lista_nueva.push(lista_aux)
+    }
+    return lista_nueva
+}
+
+const datos_unidades = importar_informacion_unidad()
 const unidades = manejo_datos()
 const infanteria = unidades[0]
 const caballeria = unidades[1]
@@ -83,7 +107,7 @@ function elegir_tipo (tipo) {
  * Función que busca la unidad entre todo lo almacenado, obteniendo su información.
  * @param {String} nombre Nombre de la unidad que se está buscando.
  * @returns {String[]} Retorna la unidad con su información ordenada con el siguiente formato:
- * Liderazgo, temporada, descripción, recomendación, [nombres]
+ * Liderazgo, temporada, descripción, recomendación, [nombres], [información]
  */
 function buscar_unidad (nombre) {
     let lista = unidades
@@ -98,6 +122,17 @@ function buscar_unidad (nombre) {
                 for (let i = 5; i < unidad.length; i++)
                     lista_aux.push(unidad[i])
                 nueva_lista.push(lista_aux)
+                let lista_toda_informacion = []
+                for (const datos of datos_unidades) {
+                    if (datos[0] == unidad[0]) {
+                        let lista_auxiliar = []
+                        lista_auxiliar.push(datos[1])
+                        lista_auxiliar.push(datos[2])
+                        lista_auxiliar.push(datos[3])
+                        lista_toda_informacion.push(lista_auxiliar)
+                    }
+                }
+                nueva_lista.push(lista_toda_informacion)
                 return nueva_lista
             }
         }
@@ -121,6 +156,11 @@ function condicion_buscar_unidad(nombre, unidad) {
         return false
 }
 
+/**
+ * Función que transforma una lista de nombres en un string con todos los nombres en una columna.
+ * @param {String[]} lista_nombre lista donde exista nombres,
+ * @returns retorna un string de nombres en una columna.
+ */
 function ordenar_nombres (lista_nombre) {
     let nombres = ''
     for (const nombre of lista_nombre)
@@ -130,7 +170,11 @@ function ordenar_nombres (lista_nombre) {
     else
         return '---'
 }
-
+/**
+ * Función que remueve un elemento de la lista.
+ * @param {[]} lista lista que se buscará el elemento.
+ * @param {String|Number} elemento_buscado elemento a buscar dentro de la lista.
+ */
 function remover_elemento_lista (lista, elemento_buscado) {
     for (let i = 0; i < lista.length; i++)
         if (lista[i] === elemento_buscado)

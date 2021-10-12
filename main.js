@@ -30,7 +30,7 @@ client.on('message', msg => {
         client.commands.get('unidades').execute(msg, client)
     else if (['infantería', 'infanteria', 'melee'].find(palabra => {return palabra === comando}))
         client.commands.get('infanteria').execute(msg)
-    else if (['caballeria', 'caballería', 'caballo'].find(palabra => {return palabra === comando}))
+    else if (['caballeria', 'caballería', 'caballo'].find(palabra => {return palabra === comando}) && comando_completo.split(/ /g).length === 1)
         client.commands.get('caballeria').execute(msg)
     else if (['distancia', 'rango'].find(palabra => {return palabra === comando}))
         client.commands.get('distancia').execute(msg)
